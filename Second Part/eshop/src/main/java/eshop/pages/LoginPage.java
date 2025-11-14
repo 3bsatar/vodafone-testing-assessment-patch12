@@ -1,0 +1,110 @@
+package eshop.pages;
+
+import eshop.utils.*;
+import io.qameta.allure.Step;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import static eshop.utils.PropertiesUtils.getPropertyValue;
+
+public class LoginPage {
+    // Locators
+    private final WebDriver driver;
+    private final By profileIcon = By.id("sl-nav-bar-img=5");
+    private final By username = By.id("username");
+    private final By password = By.id("password");
+    private final By loginButton = By.id("submitBtn");
+    private final By errorMessage = By.cssSelector("[data-test='error']");
+
+    // Constructor
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    // Navigate to the login page
+    @Step("Navigate to the login page")
+    public void navigateToLoginPage() {
+        BrowserActions.navigateToURL(driver, "https://eshop.vodafone.com.eg");
+    }
+
+    @Step("Close popups if any")
+    public LoginPage closePopupsIfAny() {
+        PopupHandler.closePopups(driver);
+        return this;
+    }
+
+    // Actions
+    // Wait >> scroll >> find >> sendKeys
+
+
+    // Applying Fluent pattern : Convert void to LoginPage to return object from the page
+    @Step("Enter username: {username}")
+    public LoginPage enterUsername(String username) {
+        ElementActions.sendData(driver, this.username, username);
+        return this;
+    }
+
+    @Step("Enter password: {password}")
+    public LoginPage enterPassword(String password) {
+        ElementActions.sendData(driver, this.password, password);
+        return this;
+    }
+
+    @Step("Click on Profile Icon")
+    public LoginPage clickProfileIcon() {
+        ElementActions.clickElement(driver, profileIcon);
+        return this;
+    }
+
+    @Step("Click on login button")
+    public LoginPage clickLoginButton() {
+        ElementActions.clickElement(driver, loginButton);
+        return this;
+    }
+
+    @Step("Get error message")
+    public String getErrorMessage() {
+        return ElementActions.getText(driver, errorMessage);
+    }
+
+
+    // Validations
+    @Step("Assert login page URL")
+    public LoginPage assertLoginPageURL() {
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getCurrentURL(driver), getPropertyValue("homeURL"), "URL is not as expected");
+        return this;
+    }
+
+    @Step("Assert login page title")
+    public LoginPage assertLoginPageTitle() {
+        CustomSoftAssertion.softAssertion.assertEquals(BrowserActions.getPageTitle(driver), getPropertyValue("appTitle"), "Title is not as expected");
+        return this;
+    }
+
+    @Step("Assert login page")
+    public LoginPage assertSucessfulLoginSoft() {
+        assertLoginPageURL().assertLoginPageTitle();
+        return this;
+    }
+
+    // Change the return type to HomePage to use it in UserFlowTC
+    @Step("Assert successful login")
+    public HomePage assertSucessfulLogin() {
+        // لو property فاضية، استخدم الـ actual URL مباشرة
+        String expectedUrl = PropertiesUtils.getPropertyValue("homeURL");
+        if(expectedUrl != null) {
+            Validations.validatePageUrl(driver, expectedUrl);
+        } else {
+            Logsutil.warn("homeURL property is null, skipping URL validation");
+        }
+        return new HomePage(driver);
+    }
+
+
+    public HomePage assertUnSucessfulLogin() {
+        Validations.validateEquals(getErrorMessage().equals(getPropertyValue("errorMSG")), getPropertyValue("errorMSG"), "Error Message");
+        return new HomePage(driver);
+    }
+
+}

@@ -1,0 +1,22 @@
+[INFO] - [2025-11-14 14:52:44] [main] [eshop.utils.BrowserActions] - Navigated to URL: https://eshop.vodafone.com.eg
+[INFO] - [2025-11-14 14:52:44] [main] [eshop.utils.Waits] - Waiting for element to be clickable: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-14 14:52:44] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-14 14:52:44] [main] [eshop.utils.Waits] - Waiting for element to be present: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-14 14:52:44] [main] [eshop.utils.Scrolling] - Scrolling to element: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.ElementActions] - Clicked on element: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.JsonUtils] - Json path: 'login-credentials.username' in the json file: 'test-data' has value: '01027925056'
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.id: username
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Waits] - Waiting for element to be present: By.id: username
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Scrolling] - Scrolling to element: By.id: username
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.ElementActions] - Data entered: 01027925056in the field: By.id: username
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.JsonUtils] - Json path: 'login-credentials.password' in the json file: 'test-data' has value: '#Mahmoud1#'
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.id: password
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Waits] - Waiting for element to be present: By.id: password
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Scrolling] - Scrolling to element: By.id: password
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.ElementActions] - Data entered: #Mahmoud1#in the field: By.id: password
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Waits] - Waiting for element to be clickable: By.id: submitBtn
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.id: submitBtn
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Waits] - Waiting for element to be present: By.id: submitBtn
+[INFO] - [2025-11-14 14:52:49] [main] [eshop.utils.Scrolling] - Scrolling to element: By.id: submitBtn
+[INFO] - [2025-11-14 14:52:50] [main] [eshop.utils.ElementActions] - Clicked on element: By.id: submitBtn
+[INFO] - [2025-11-14 14:52:50] [main] [eshop.utils.BrowserActions] - Current URL: https://eshop.vodafone.com.eg/en/
