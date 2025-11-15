@@ -1,12 +1,9 @@
 import eshop.drivers.DriverManager;
 import eshop.listeners.TestNGListeners;
-import eshop.pages.HomePage;
 import eshop.pages.LoginPage;
 import eshop.utils.JsonUtils;
 import eshop.utils.PropertiesUtils;
-import eshop.utils.ScreenshotsUtils;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -29,7 +26,10 @@ public class E2E {
                 .clickLaptopCategory()
                 .clickProductByKeyword(testData.getJsonData("product-names.item1.name"))
                 .assertProductAddedToCart(testData.getJsonData("product-names.item1.name"))
-                .clickLaptopCategory();
+             // .clickLaptopCategory()
+             // .clickProductByKeyword(testData.getJsonData("product-names.item2.name"))
+              //.assertProductAddedToCart(testData.getJsonData("product-names.item2.name"));
+                .searchAddAndAssert(testData.getJsonData("product-names.item2.name"));
     }
 
 

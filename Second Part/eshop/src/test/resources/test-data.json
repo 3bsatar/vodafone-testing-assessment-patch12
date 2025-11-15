@@ -9,6 +9,9 @@
     },
     "item2": {
       "name": "Lenovo"
+    },
+    "item3": {
+      "name": "Dell"
     }
   }
 }

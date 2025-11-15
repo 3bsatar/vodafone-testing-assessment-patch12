@@ -1,0 +1,91 @@
+[INFO] - [2025-11-15 14:26:13] [main] [eshop.listeners.TestNGListeners] - Test execution is starting.
+[INFO] - [2025-11-15 14:26:13] [main] [eshop.utils.PropertiesUtils] - Loading Properties File Data
+[WARN] - [2025-11-15 14:26:13] [main] [eshop.utils.FileUtils] - Failed to delete file: E:\Work\Vodafone Task\Second Part\eshop\test-outputs\Logs\log_2025-11-15_14-26-13.log - test-outputs\Logs\log_2025-11-15_14-26-13.log: The process cannot access the file because it is being used by another process
+[INFO] - [2025-11-15 14:26:13] [main] [eshop.utils.PropertiesUtils] - Loading Properties File Data
+[INFO] - [2025-11-15 14:26:13] [main] [eshop.utils.PropertiesUtils] - Loading Properties File Data
+[INFO] - [2025-11-15 14:26:13] [main] [eshop.utils.PropertiesUtils] - Loading Properties File Data
+[INFO] - [2025-11-15 14:26:23] [main] [eshop.utils.BrowserActions] - Navigated to URL: https://eshop.vodafone.com.eg
+[INFO] - [2025-11-15 14:26:24] [main] [eshop.utils.PopupHandler] - Cookies popup closed.
+[INFO] - [2025-11-15 14:26:24] [main] [eshop.utils.Waits] - Waiting for element to be clickable: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-15 14:26:24] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-15 14:26:24] [main] [eshop.utils.Waits] - Waiting for element to be present: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-15 14:26:24] [main] [eshop.utils.Scrolling] - Scrolling to element: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-15 14:26:27] [main] [eshop.utils.ElementActions] - Clicked on element: By.id: sl-nav-bar-img=5
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.JsonUtils] - Json path: 'login-credentials.username' in the json file: 'test-data' has value: '01027925056'
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.id: username
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Waits] - Waiting for element to be present: By.id: username
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Scrolling] - Scrolling to element: By.id: username
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.ElementActions] - Data entered: 01027925056in the field: By.id: username
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.JsonUtils] - Json path: 'login-credentials.password' in the json file: 'test-data' has value: '#Mahmoud1#'
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.id: password
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Waits] - Waiting for element to be present: By.id: password
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Scrolling] - Scrolling to element: By.id: password
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.ElementActions] - Data entered: #Mahmoud1#in the field: By.id: password
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Waits] - Waiting for element to be clickable: By.id: submitBtn
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.id: submitBtn
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Waits] - Waiting for element to be present: By.id: submitBtn
+[INFO] - [2025-11-15 14:26:28] [main] [eshop.utils.Scrolling] - Scrolling to element: By.id: submitBtn
+[INFO] - [2025-11-15 14:26:29] [main] [eshop.utils.ElementActions] - Clicked on element: By.id: submitBtn
+[INFO] - [2025-11-15 14:26:29] [main] [eshop.utils.BrowserActions] - Current URL: https://eshop.vodafone.com.eg/en/
+[INFO] - [2025-11-15 14:26:29] [main] [eshop.pages.HomePage] - Clicking on Laptop
+[INFO] - [2025-11-15 14:26:29] [main] [eshop.utils.Waits] - Waiting for element to be clickable: By.xpath: //span[normalize-space()='Laptops']
+[INFO] - [2025-11-15 14:26:29] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.xpath: //span[normalize-space()='Laptops']
+[INFO] - [2025-11-15 14:26:29] [main] [eshop.utils.Waits] - Waiting for element to be present: By.xpath: //span[normalize-space()='Laptops']
+[INFO] - [2025-11-15 14:26:30] [main] [eshop.utils.Scrolling] - Scrolling to element: By.xpath: //span[normalize-space()='Laptops']
+[INFO] - [2025-11-15 14:26:31] [main] [eshop.utils.ElementActions] - Clicked on element: By.xpath: //span[normalize-space()='Laptops']
+[INFO] - [2025-11-15 14:26:31] [main] [eshop.utils.JsonUtils] - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'ASUS'
+[INFO] - [2025-11-15 14:26:31] [main] [eshop.utils.Waits] - Waiting for element to be clickable: By.xpath: //p[contains(., 'ASUS')]
+[INFO] - [2025-11-15 14:26:31] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.xpath: //p[contains(., 'ASUS')]
+[INFO] - [2025-11-15 14:26:31] [main] [eshop.utils.Waits] - Waiting for element to be present: By.xpath: //p[contains(., 'ASUS')]
+[INFO] - [2025-11-15 14:26:32] [main] [eshop.utils.Scrolling] - Scrolling to element: By.xpath: //p[contains(., 'ASUS')]
+[INFO] - [2025-11-15 14:26:33] [main] [eshop.utils.ElementActions] - Clicked on element via JS due to interception: By.xpath: //p[contains(., 'ASUS')]
+[INFO] - [2025-11-15 14:26:33] [main] [eshop.utils.ElementActions] - Clicked on element safely: By.xpath: //p[contains(., 'ASUS')]
+[INFO] - [2025-11-15 14:26:33] [main] [eshop.utils.Waits] - Waiting for element to be clickable: [unknown locator]
+[INFO] - [2025-11-15 14:26:33] [main] [eshop.utils.Waits] - Waiting for element to be visible: [unknown locator]
+[INFO] - [2025-11-15 14:26:33] [main] [eshop.utils.Waits] - Waiting for element to be present: [unknown locator]
+[INFO] - [2025-11-15 14:26:35] [main] [eshop.utils.Waits] - Waiting for element to be clickable: [unknown locator]
+[INFO] - [2025-11-15 14:26:35] [main] [eshop.utils.Waits] - Waiting for element to be visible: [unknown locator]
+[INFO] - [2025-11-15 14:26:35] [main] [eshop.utils.Waits] - Waiting for element to be present: [unknown locator]
+[INFO] - [2025-11-15 14:26:35] [main] [eshop.utils.Scrolling] - Scrolling to element: [unknown locator]
+[INFO] - [2025-11-15 14:26:36] [main] [eshop.utils.ElementActions] - Clicked on element via JS due to interception: [unknown locator]
+[INFO] - [2025-11-15 14:26:36] [main] [eshop.utils.ElementActions] - Clicked on element safely: [unknown locator]
+[INFO] - [2025-11-15 14:26:36] [main] [eshop.utils.Waits] - Waiting for element to be clickable: [unknown locator]
+[INFO] - [2025-11-15 14:26:36] [main] [eshop.utils.Waits] - Waiting for element to be visible: [unknown locator]
+[INFO] - [2025-11-15 14:26:36] [main] [eshop.utils.Waits] - Waiting for element to be present: [unknown locator]
+[INFO] - [2025-11-15 14:26:36] [main] [eshop.utils.Scrolling] - Scrolling to element: [unknown locator]
+[INFO] - [2025-11-15 14:26:37] [main] [eshop.utils.ElementActions] - Clicked on element: [unknown locator]
+[INFO] - [2025-11-15 14:26:37] [main] [eshop.utils.JsonUtils] - Json path: 'product-names.item1.name' in the json file: 'test-data' has value: 'ASUS'
+[INFO] - [2025-11-15 14:26:37] [main] [eshop.utils.Waits] - Waiting for element to be visible: [unknown locator]
+[INFO] - [2025-11-15 14:26:37] [main] [eshop.utils.Waits] - Waiting for element to be present: [unknown locator]
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.pages.HomePage] - Asserting product added to cart: ASUS, Actual Value: Remove
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.pages.HomePage] - Product added to cart successfully: ASUS
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.utils.JsonUtils] - Json path: 'product-names.item2.name' in the json file: 'test-data' has value: 'Lenovo'
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.id: searchInput
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.utils.Waits] - Waiting for element to be present: By.id: searchInput
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.utils.Scrolling] - Scrolling to element: By.id: searchInput
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.utils.ElementActions] - Data entered: Lenovoin the field: By.id: searchInput
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.pages.HomePage] - Searched for: Lenovo and pressed Enter
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.utils.Waits] - Waiting for element to be clickable: By.xpath: //p[contains(., 'Lenovo')]
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.utils.Waits] - Waiting for element to be visible: By.xpath: //p[contains(., 'Lenovo')]
+[INFO] - [2025-11-15 14:26:38] [main] [eshop.utils.Waits] - Waiting for element to be present: By.xpath: //p[contains(., 'Lenovo')]
+[INFO] - [2025-11-15 14:26:40] [main] [eshop.utils.Scrolling] - Scrolling to element: By.xpath: //p[contains(., 'Lenovo')]
+[INFO] - [2025-11-15 14:26:41] [main] [eshop.utils.ElementActions] - Clicked on element via JS due to interception: By.xpath: //p[contains(., 'Lenovo')]
+[INFO] - [2025-11-15 14:26:41] [main] [eshop.utils.ElementActions] - Clicked on element safely: By.xpath: //p[contains(., 'Lenovo')]
+[INFO] - [2025-11-15 14:26:41] [main] [eshop.utils.Waits] - Waiting for element to be clickable: [unknown locator]
+[INFO] - [2025-11-15 14:26:41] [main] [eshop.utils.Waits] - Waiting for element to be visible: [unknown locator]
+[INFO] - [2025-11-15 14:26:41] [main] [eshop.utils.Waits] - Waiting for element to be present: [unknown locator]
+[INFO] - [2025-11-15 14:26:43] [main] [eshop.utils.Waits] - Waiting for element to be clickable: [unknown locator]
+[INFO] - [2025-11-15 14:26:43] [main] [eshop.utils.Waits] - Waiting for element to be visible: [unknown locator]
+[INFO] - [2025-11-15 14:26:43] [main] [eshop.utils.Waits] - Waiting for element to be present: [unknown locator]
+[INFO] - [2025-11-15 14:26:43] [main] [eshop.utils.Scrolling] - Scrolling to element: [unknown locator]
+[INFO] - [2025-11-15 14:26:44] [main] [eshop.utils.ElementActions] - Clicked on element via JS due to interception: [unknown locator]
+[INFO] - [2025-11-15 14:26:44] [main] [eshop.utils.ElementActions] - Clicked on element safely: [unknown locator]
+[INFO] - [2025-11-15 14:26:44] [main] [eshop.utils.Waits] - Waiting for element to be clickable: [unknown locator]
+[INFO] - [2025-11-15 14:26:44] [main] [eshop.utils.Waits] - Waiting for element to be visible: [unknown locator]
+[INFO] - [2025-11-15 14:26:44] [main] [eshop.utils.Waits] - Waiting for element to be present: [unknown locator]
+[INFO] - [2025-11-15 14:26:44] [main] [eshop.utils.Scrolling] - Scrolling to element: [unknown locator]
+[INFO] - [2025-11-15 14:26:45] [main] [eshop.utils.ElementActions] - Clicked on element: [unknown locator]
+[INFO] - [2025-11-15 14:26:45] [main] [eshop.utils.Waits] - Waiting for element to be visible: [unknown locator]
+[INFO] - [2025-11-15 14:26:45] [main] [eshop.utils.Waits] - Waiting for element to be present: [unknown locator]
+[INFO] - [2025-11-15 14:26:46] [main] [eshop.pages.HomePage] - Asserting product added to cart: Lenovo, Actual Value: Remove
+[INFO] - [2025-11-15 14:26:46] [main] [eshop.pages.HomePage] - Product added to cart successfully: Lenovo

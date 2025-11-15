@@ -25,7 +25,7 @@ public class HomePage {
             .toRightOf(profileIcon);
 
     private final By laptopText = By.xpath("//span[normalize-space()='Laptops']");
-    private final By searchBar = By.id("#searchInput");
+    private final By searchBar = By.id("searchInput");
 
     // Actions
     @Step("Navigate to Home Page")
@@ -54,14 +54,18 @@ public class HomePage {
     }
 
 
-    @Step("Search for iPhone")
-    public HomePage searchForIphone(){
-        WebElement searchBarElement = driver.findElement(searchBar);
-        searchBarElement.sendKeys("iPhone");
-        // searchBarElement.sendKeys(Keys.ENTER);
-        Logsutil.info("Pressed Enter after typing iPhone in search bar");
-        return new HomePage(driver);
+    @Step("Search for product {keyword}, add to cart and assert")
+    public HomePage searchAddAndAssert(String keyword) {
+        ElementActions.sendData(driver, searchBar, keyword + Keys.ENTER);
+        Logsutil.info("Searched for: " + keyword + " and pressed Enter");
+
+        clickProductByKeyword(keyword);
+
+        assertProductAddedToCart(keyword);
+
+        return this;
     }
+
 
     @Step("Click on cart icon")
     public HomePage clickLaptopCategory() {
@@ -78,22 +82,6 @@ public class HomePage {
         return new HomePage(driver);
     }
 
-    @Step("Add specific product to cart")
-    public HomePage addSpecificProductToCart(String productName) {
-        Logsutil.info("Adding product to cart: " + productName);
-        // el Button elly below el productName as dynamic locator
-        By addToCartButton = RelativeLocator.with(By.tagName("button")).below(By.xpath("//div[.= '" + productName + "']"));
-        ElementActions.clickElement(driver, addToCartButton);
-        return this;
-    }
-
-    // Using Fluent Pattern "CartPage object not HomePage"
-    @Step("Click on cart icon")
-    public CartPage clickCartIcon() {
-        Logsutil.info("Clicking on cart icon");
-        ElementActions.clickElement(driver, cartIcon);
-        return new CartPage(driver);
-    }
     // Validations
 
     @Step("Assert product added to cart")

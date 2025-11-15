@@ -21,6 +21,13 @@ public class TestNGListeners implements IExecutionListener, ITestListener, IInvo
         FileUtils.deleteFile(allureResult);
         FileUtils.cleanDirectory(logs);
         FileUtils.cleanDirectory(screenshots);
+
+        // ← هنا ضيف Environment ديناميكي
+        AllureUtils.setEnvironment(
+                loadProperties().getProperty("browser", "Chrome"),
+                loadProperties().getProperty("url", "https://eshop.vodafone.com.eg"),
+                loadProperties().getProperty("version", "142.0.7444.163")
+        );
     }
 
     @Override

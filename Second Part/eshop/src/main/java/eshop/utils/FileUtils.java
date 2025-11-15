@@ -42,7 +42,7 @@ public class FileUtils {
                 try {
                     Files.delete(file.toPath());
                 } catch (IOException e) {
-                    Logsutil.error("Failed to delete: " + file.getAbsolutePath() + " - " + e.getMessage());
+                    Logsutil.warn("Failed to delete: " + file.getAbsolutePath() + " - " + e.getMessage());
                 }
             }
         }
@@ -50,7 +50,7 @@ public class FileUtils {
         try {
             Files.delete(dirPath.toPath()); // delete the main directory after its contents
         } catch (IOException e) {
-            Logsutil.error("Failed to delete directory: " + dirPath.getAbsolutePath() + " - " + e.getMessage());
+            Logsutil.warn("Failed to delete directory: " + dirPath.getAbsolutePath() + " - " + e.getMessage());
         }
     }
 
@@ -67,13 +67,13 @@ public class FileUtils {
                 if (file.isDirectory()) {
                     cleanDirectory(file); // recursive delete contents of subdirectories
                     if (!org.apache.commons.io.FileUtils.deleteQuietly(file)) {
-                        Logsutil.error("Failed to delete directory: " + file.getAbsolutePath());
+                        Logsutil.warn("Failed to delete directory: " + file.getAbsolutePath());
                     }
                 } else {
                     try {
                         Files.delete(file.toPath());
                     } catch (IOException e) {
-                        Logsutil.error("Failed to delete file: " + file.getAbsolutePath() + " - " + e.getMessage());
+                        Logsutil.warn("Failed to delete file: " + file.getAbsolutePath() + " - " + e.getMessage());
                     }
                 }
             }

@@ -17,21 +17,19 @@ public class PopupHandler {
             WebElement spinClose = wait.until(ExpectedConditions.elementToBeClickable(By.className("close-modal-desktop")));
             spinClose.click();
         } catch (Exception e) {
-            System.out.println("No spin popup found.");
+            Logsutil.info("No spin popup found.");
         }
 
         try {
             WebElement cookieReject = driver.findElement(By.id("onetrust-reject-all-handler"));
 
-            // scroll للعنصر لو محتاج
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", cookieReject);
 
-            // click بواسطة JS عشان ما يتعطلش بسبب overlay
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cookieReject);
 
-            System.out.println("Cookies popup closed.");
+            Logsutil.info("Cookies popup closed.");
         } catch (Exception e) {
-            System.out.println("No cookies popup found.");
+            Logsutil.info("No cookies popup found.");
         }
     }
 

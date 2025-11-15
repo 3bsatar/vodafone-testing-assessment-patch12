@@ -3,6 +3,8 @@ import io.qameta.allure.Allure;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.util.Properties;
 
 public class AllureUtils {
     public static final String ALLURE_Results_PATH = "test-outputs/allure-results";
@@ -31,6 +33,22 @@ public class AllureUtils {
             Allure.addAttachment(screenshotName, Files.newInputStream(Path.of(screenshotPath)));
         } catch (Exception e) {
             Logsutil.error("Failed to attach screenshot to Allure report: " + e.getMessage());
+        }
+    }
+
+    public static void setEnvironment(String browser, String url, String version) {
+        try {
+            Path envFile = Path.of("test-outputs/allure-results/environment.properties");
+
+            Properties props = new Properties();
+            props.setProperty("Browser", browser);
+            props.setProperty("URL", url);
+            props.setProperty("Version", version);
+
+            Files.createDirectories(envFile.getParent());
+            props.store(Files.newOutputStream(envFile, StandardOpenOption.CREATE), "Allure Environment");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
