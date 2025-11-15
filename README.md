@@ -1,4 +1,7 @@
-# 📌 Interview Task
+<div align="center">
+  <img src="Second%20Part/eshop/.idea/Icon.png" alt="Logo" width="200" height="200">
+  <h1>Interview Task</h1>
+</div>
 
 ## 📍 Second Part
 
