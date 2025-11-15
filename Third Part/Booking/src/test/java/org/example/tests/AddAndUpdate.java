@@ -2,12 +2,10 @@ package org.example.tests;
 
 import io.restassured.response.Response;
 import org.example.apis.CreateBooking;
-import org.example.apis.TokenApi;
 import org.example.apis.UpdateBooking;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pojo.BookingPojo;
-import pojo.CreateTokenPojo;
 
 import java.util.Random;
 
