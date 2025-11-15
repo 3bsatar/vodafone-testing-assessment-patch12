@@ -28,12 +28,6 @@ public class HomePage {
     private final By searchBar = By.id("searchInput");
 
     // Actions
-    @Step("Navigate to Home Page")
-    public HomePage navigateToHomePage() {
-        BrowserActions.navigateToURL(driver, PropertiesUtils.getPropertyValue("homePageURL"));
-//        driver.get("https://www.saucedemo.com/inventory.html");
-        return this;
-    }
 
     @Step("Click on first product containing keyword: {keyword}")
     public HomePage clickProductByKeyword(String keyword) {
@@ -46,7 +40,6 @@ public class HomePage {
 
         Waits.waitForElementClickable(driver, addToCartButton);
 
-        // Click on the Add To Cart button
         ElementActions.clickElementSafely(driver, addToCartButton);
 
         ElementActions.clickElement(driver, cartIcon);
@@ -74,28 +67,17 @@ public class HomePage {
         return new HomePage(driver);
     }
 
-    @Step("Add First product to cart")
-    public HomePage addFirstElement() {
-        // el Button elly below el productName as dynamic locator
-        By addToCartButton = By.xpath("/html/body/vf-root/main/section[2]/vf-landing-page/section/vf-floating-section/section/div[2]/vf-products-container/section/div/vf-product-card[1]");
-        ElementActions.clickElement(driver, addToCartButton);
-        return new HomePage(driver);
-    }
-
     // Validations
 
     @Step("Assert product added to cart")
     public HomePage assertProductAddedToCart(String productName) {
 
-        // Locator للمنتج نفسه
         By productLocator = By.xpath("//p[contains(., '" + productName + "')]");
 
-        // Locator لنص Remove اللي تحت المنتج
         By removeText = RelativeLocator
                 .with(By.xpath(".//p[contains(., 'Remove')]"))
                 .below(productLocator);
 
-        // استنى لحد ما العنصر يكون ظاهر باستخدام Waits
         WebElement removeElement = Waits.waitForElementVisible(driver, removeText);
 
         String actualValue = removeElement.getText().trim();

@@ -1,7 +1,7 @@
 {
   "login-credentials": {
-    "username": "01027925056",
-    "password": "#Mahmoud1#"
+    "username": "01020371036",
+    "password": "Test@1234"
   },
   "product-names": {
     "item1": {
@@ -11,7 +11,7 @@
       "name": "Lenovo"
     },
     "item3": {
-      "name": "Dell"
+      "name": "HP"
     }
   }
 }

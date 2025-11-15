@@ -17,6 +17,10 @@ public class ChromeFactory extends AbstractDriver implements WebDriverOptionsAbs
         options.addArguments("--disable-infobars");
         options.addArguments("--disable-notifications");
         options.addArguments("--remote-allow-origins=*");
+
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        options.setExperimentalOption("useAutomationExtension", false);
+
         Map<String, Object> prefs = Map.of(
                 "profile.default_content_setting_values.notifications", 1,
                 "credentials_enable_service", false,

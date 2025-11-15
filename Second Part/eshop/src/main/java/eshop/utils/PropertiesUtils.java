@@ -38,7 +38,6 @@ public class PropertiesUtils {
         }
     }
 
-    // Get the value of the property
     public static String getPropertyValue(String key) {
 
         try {

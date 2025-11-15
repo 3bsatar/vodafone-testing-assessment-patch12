@@ -4,6 +4,7 @@ import eshop.pages.LoginPage;
 import eshop.utils.JsonUtils;
 import eshop.utils.PropertiesUtils;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -26,10 +27,10 @@ public class E2E {
                 .clickLaptopCategory()
                 .clickProductByKeyword(testData.getJsonData("product-names.item1.name"))
                 .assertProductAddedToCart(testData.getJsonData("product-names.item1.name"))
-             // .clickLaptopCategory()
-             // .clickProductByKeyword(testData.getJsonData("product-names.item2.name"))
-              //.assertProductAddedToCart(testData.getJsonData("product-names.item2.name"));
-                .searchAddAndAssert(testData.getJsonData("product-names.item2.name"));
+                .searchAddAndAssert(testData.getJsonData("product-names.item2.name"))
+                .clickLaptopCategory()
+                .clickProductByKeyword(testData.getJsonData("product-names.item3.name"))
+                .assertProductAddedToCart(testData.getJsonData("product-names.item3.name"));
     }
 
 
@@ -45,8 +46,8 @@ public class E2E {
 
 
 
-//    @AfterClass(alwaysRun = true)
-//    public void tearDown() {
-//        DriverManager.getDriver().quit();
-//    }
+    @AfterClass(alwaysRun = true)
+    public void tearDown() {
+        DriverManager.getDriver().quit();
+    }
 }

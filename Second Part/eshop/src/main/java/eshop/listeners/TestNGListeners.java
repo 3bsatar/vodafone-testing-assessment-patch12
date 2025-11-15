@@ -15,14 +15,12 @@ public class TestNGListeners implements IExecutionListener, ITestListener, IInvo
 
     @Override
     public void onExecutionStart() {
-        // Code to execute before the test execution starts
         Logsutil.info("Test execution is starting.");
         loadProperties();
         FileUtils.deleteFile(allureResult);
         FileUtils.cleanDirectory(logs);
         FileUtils.cleanDirectory(screenshots);
 
-        // ← هنا ضيف Environment ديناميكي
         AllureUtils.setEnvironment(
                 loadProperties().getProperty("browser", "Chrome"),
                 loadProperties().getProperty("url", "https://eshop.vodafone.com.eg"),

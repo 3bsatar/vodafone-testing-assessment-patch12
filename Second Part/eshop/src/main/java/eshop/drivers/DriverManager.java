@@ -6,12 +6,19 @@ public class DriverManager {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     public static void createInstance(String browserName) {
-        if (driver.get() == null) { // لو ما فيش instance موجودة
+        if (driver.get() == null) {
             if (browserName.equalsIgnoreCase("chrome")) {
                 ChromeFactory chromeFactory = new ChromeFactory();
                 driver.set(chromeFactory.startDriver());
             }
-            // ممكن تضيف Firefox, Edge هنا بعدين
+            else if (browserName.equalsIgnoreCase("firefox")) {
+                FirefoxFactory firefoxFactory = new FirefoxFactory();
+                 driver.set(firefoxFactory.startDriver());
+             }
+             else if (browserName.equalsIgnoreCase("edge")) {
+                 EdgeFactory edgeFactory = new EdgeFactory();
+                 driver.set(edgeFactory.startDriver());
+             }
         }
     }
 
