@@ -3,7 +3,7 @@
   <h1>Interview Task</h1>
 </div>
 
-## 📍 Second Part
+## Second Part
 
 ![Java](https://img.shields.io/badge/Language-Java-blue?logo=java)
 ![Maven](https://img.shields.io/badge/Build-Maven-orange?logo=apache-maven)
@@ -26,7 +26,7 @@ Implemented as part of the **Vodafone Testing Position – Assessment Task (Patc
 - **Log4j2**
 - **Cucumber**
 
-## 📁 Project Structure
+## Project Structure
 ```bash
 eshop/
 ├── src/
@@ -95,7 +95,7 @@ eshop/
 ├── pom.xml                       # Maven config & dependencies
 ```
 
-   ## ▶️ Running Tests
+   ## Running Tests
   You can execute the tests using Maven:
 
   ```bash
@@ -109,7 +109,7 @@ eshop/
   mvn clean test -Dtest=TestRunner
   ```
 
-  ## 📊 Generating & Viewing Allure Reports
+  ## Generating & Viewing Allure Reports
   The framework integrates **Allure Reports** for rich test insights.
 
   ```bash
@@ -122,7 +122,7 @@ eshop/
   # OR serve Allure report directly
   allure serve test-outputs/allure-results/
   ```
-  ## 📝 Notes
+  ## Notes
   - Ensure **Java 11+**, **Maven**, and **Allure CLI** are installed and added to your system PATH.
   - Chrome, Edge, or Firefox browsers must be installed for WebDriver tests.
   - Allure results are saved in `test-outputs/allure-results/`.
@@ -131,7 +131,7 @@ eshop/
 
 ---
 
-  ## 📍 Third Part
+  ## Third Part
 
   ![Java](https://img.shields.io/badge/Language-Java-blue?logo=java)
   ![Maven](https://img.shields.io/badge/Build-Maven-orange?logo=apache-maven)
@@ -142,7 +142,7 @@ eshop/
 
   ---
 
-  ## 🧩 Tech Stack
+  ## Tech Stack
   - **Language:** Java  
   - **Build Tool:** Maven  
   - **Testing Framework:** TestNG  
@@ -150,7 +150,7 @@ eshop/
 
   ---
 
-  ## 📂 Project Structure
+  ## Project Structure
   ```plaintext
   Booking/
   ├── src/
@@ -185,7 +185,7 @@ eshop/
   ├── pom.xml                        # Maven dependencies
 ```
 
-  ## ▶️ Running Tests
+  ## Running Tests
   You can execute the tests using Maven:
 
   ```bash
@@ -195,7 +195,7 @@ eshop/
   # Run a specific TestNG class (single test case)
   mvn clean test -Dtest=ClassName
   ```
-## 🔧 Configuration
+## Configuration
 Store environment variables and base URLs inside `config.properties`:
 
 ```properties
@@ -203,7 +203,7 @@ base.url = "https://restful-booker.herokuapp.com"
 username = "admin"
 password = "password123"
 ```
-## 🧠 Test Scenarios Covered
+## Test Scenarios Covered
 
 | Test Class           | Description                       |
 |---------------------|-----------------------------------|
@@ -216,13 +216,13 @@ password = "password123"
 
 
 
-  ## 👤 Author
+  ## Author
   **Mahmoud Mesalem**
 
   - [LinkedIn](https://www.linkedin.com/in/mahmoud--mesalem)
   - [GitHub](https://github.com/3bsatar)
 
-  ## 🤝 About This Submission
+  ## About This Submission
   This repository was prepared specifically for the 
   Vodafone Testing Position – Assessment Task (Patch 12).
   All work has been organized to make the review process
