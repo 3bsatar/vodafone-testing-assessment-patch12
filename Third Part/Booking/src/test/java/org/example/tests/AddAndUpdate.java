@@ -13,7 +13,6 @@ public class AddAndUpdate extends BaseTest {
 
     @Test
     public void testCreateAndUpdateBooking() {
-        // استخدم token مباشرة من BaseTest
         String firstname = "User" + new Random().nextInt(1000);
         String lastname = "Tester";
         int price = new Random().nextInt(500) + 100;
@@ -30,7 +29,6 @@ public class AddAndUpdate extends BaseTest {
         int bookingId = createResponse.jsonPath().getInt("bookingid");
         System.out.println("Created booking ID: " + bookingId);
 
-        // Update same booking
         BookingPojo updateBookingData = new BookingPojo(
                 "Mahmoud", lastname, price, true,
                 "2025-10-01", "2025-10-15", "Dinner"

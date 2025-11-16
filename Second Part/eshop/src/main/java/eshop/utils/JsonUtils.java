@@ -21,7 +21,6 @@ public class JsonUtils {
         }
     }
 
-    //login-credentials.username
     public String getJsonData(String jsonPath) {
         String testData = "";
         try {

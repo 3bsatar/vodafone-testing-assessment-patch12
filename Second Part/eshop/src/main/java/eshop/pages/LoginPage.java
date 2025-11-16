@@ -91,7 +91,6 @@ public class LoginPage {
     // Change the return type to HomePage to use it in UserFlowTC
     @Step("Assert successful login")
     public HomePage assertSucessfulLogin() {
-        // لو property فاضية، استخدم الـ actual URL مباشرة
         String expectedUrl = PropertiesUtils.getPropertyValue("homeURL");
         if(expectedUrl != null) {
             Validations.validatePageUrl(driver, expectedUrl);

@@ -16,6 +16,6 @@ public class DeleteBookingTest extends BaseTest{
         response.prettyPrint();
 
         Assert.assertEquals(response.statusCode(), 201);
-        System.out.println("🗑️ Booking deleted successfully!");
+        System.out.println("Booking deleted successfully!");
     }
 }

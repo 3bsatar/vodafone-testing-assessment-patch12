@@ -58,7 +58,6 @@ public class EndToEndFlow extends BaseTest {
         Assert.assertEquals(updatedNeed, "Lunch", "Additional needs not updated!");
         System.out.println("Booking updated successfully.");
 
-        // Step 4️⃣: Get updated booking
         Response getResponse = given()
                 .spec(requestSpec)
                 .when()

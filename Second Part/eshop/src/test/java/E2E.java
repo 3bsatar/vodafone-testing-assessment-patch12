@@ -34,7 +34,6 @@ public class E2E {
     }
 
 
-    // Configurations
     @BeforeClass(alwaysRun = true)
     public void setup() {
         testData = new JsonUtils("test-data");
@@ -43,8 +42,6 @@ public class E2E {
         driver = DriverManager.getDriver();
         new LoginPage(driver).navigateToLoginPage();
     }
-
-
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
