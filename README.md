@@ -3,6 +3,27 @@
   <h1>Interview Task</h1>
 </div>
 
+
+## First Part
+
+![STLC](https://img.shields.io/badge/STLC-Test%20Life%20Cycle-blue)
+![Bug](https://img.shields.io/badge/Bug%20Report-Tasks-red)
+![Excel](https://img.shields.io/badge/Files-Excel-lightgrey?logo=microsoft-excel)
+
+A **Software Testing Life Cycle (STLC)** and **Bug Reporting** documentation for the **Yalla Kora mobile application**.  
+This part focuses on organizing **test ideas**, **prioritization**, and **actual bug reports** for better understanding and traceability.  
+Test cases are saved in `YallaKora TCs.xlsx` and bug reports in `YallaKora Bug Report.xlsx`.  
+Supporting evidence such as screenshots and attachments are kept in the `Attachments/` folder.
+
+## Contents
+```bash
+First Part/
+├── YallaKora TCs.xlsx           
+├── YallaKora Bug Report.xlsx    
+└── Attachments/                
+
+```
+
 ## Second Part
 
 ![Java](https://img.shields.io/badge/Language-Java-blue?logo=java)
