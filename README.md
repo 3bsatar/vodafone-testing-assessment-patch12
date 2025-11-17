@@ -38,7 +38,7 @@ A **Web Automation Framework** developed using **Java**, **Selenium**, **TestNG*
 Implemented as part of the **Vodafone Testing Position – Assessment Task (Patch 12)** to automate end-to-end testing for the **Vodafone eShop application**, with a focus on **clean, maintainable code** and **integrated Allure Reports** for comprehensive test insights.
 
 
-## 🛠 Tech Stack
+## Tech Stack
 - **Java 11+**
 - **Maven**
 - **TestNG**
@@ -180,7 +180,6 @@ eshop/
   │   │   │   ├── BookingPojo.java
   │   │   │   ├── CreateTokenPojo.java
   │   │   │   └── GetAllIdsPojo.java
-  │   │   └── resources/             # Config files (config.properties, log4j2.xml)
   │   │
   │   └── test/java/
   │       ├── org/example/
@@ -204,6 +203,7 @@ eshop/
   │       │       └── UpdateBookingTest.java
   │
   ├── pom.xml                        # Maven dependencies
+  ├── testSuite.xml                  # TestNG suite configuration file
 ```
 
   ## Running Tests
@@ -215,9 +215,11 @@ eshop/
 
   # Run a specific TestNG class (single test case)
   mvn clean test -Dtest=ClassName
+
+  # Run TestNG suite file
+  mvn clean test -DsuiteXmlFile=testng.xml
+
   ```
-## Configuration
-Store environment variables and base URLs inside `config.properties`:
 
 ```properties
 base.url = "https://restful-booker.herokuapp.com"
